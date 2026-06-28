@@ -1,0 +1,25 @@
+{
+  "name": "teepha",
+  "version": "1.0.0",
+  "description": "Personal portfolio site for Lateefat B. Yusuf, a product designer and full-stack builder who designs and ships digital products end to end.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teepha-art/lateefat-yusuf-protfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/teepha-art/lateefat-yusuf-protfolio/issues"
+  },
+  "homepage": "https://github.com/teepha-art/lateefat-yusuf-protfolio#readme",
+  "dependencies": {
+    "pngquant-bin": "^9.0.0",
+    "sharp": "^0.35.2"
+  }
+}
