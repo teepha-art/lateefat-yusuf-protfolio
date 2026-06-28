@@ -1,0 +1,155 @@
+/* ============================================================
+   GLOBAL — imports tokens, base styles, shared utilities
+   ============================================================ */
+
+@import url('../tokens.css');
+
+/* ---------- Smooth scroll ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- Links ---------- */
+a {
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+/* ---------- Images ---------- */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ---------- Section spacing ---------- */
+.section {
+    padding-top: var(--s-9);
+    padding-bottom: var(--s-9);
+}
+
+@media (max-width: 680px) {
+    .section {
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
+
+    .section:last-of-type {
+        padding-bottom: 40px;
+    }
+}
+
+/* ---------- Separator ---------- */
+.divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 0;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    font-family: 'Satoshi', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: var(--bg);
+    background: var(--ink);
+    border: none;
+    padding: 14px 28px;
+    border-radius: var(--r-pill);
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.88;
+    color: var(--bg);
+}
+
+.btn--outline {
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid var(--line);
+}
+
+.btn--outline:hover {
+    border-color: var(--ink);
+    color: var(--ink);
+}
+
+/* ---------- Tagline ---------- */
+.tagline {
+    font-weight: 700;
+    font-size: clamp(28px, 7vw, 82px);
+    letter-spacing: -0.035em;
+    line-height: 1.0;
+    text-align: left;
+    margin: 0;
+    max-width: 22ch;
+}
+
+.tagline-line2 {
+  display: inline-block;
+  margin-top: 8px;
+  margin-left: 12px;
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* --- Mobile tagline --- */
+@media (max-width: 680px) {
+    .tagline {
+        font-size: clamp(32px, 8vw, 82px);
+    }
+
+    .tagline-line2 {
+        margin-left: 4px;
+    }
+}
+
+/* ---------- Visually hidden ---------- */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ---------- Custom cursor ---------- */
+* {
+  cursor: url('../public/cursors/arrow.png') 4 4, auto;
+}
+
+a, button, [role="button"], label, .pill {
+  cursor: url('../public/cursors/hand.png') 4 4, pointer;
+}

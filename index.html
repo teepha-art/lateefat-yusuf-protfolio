@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lateefat — Product Engineer</title>
+    <meta name="description" content="Portfolio of Lateefat B. Yusuf (Teepha) — a full-stack product designer who designs, builds, and ships products end to end.">
+
+    <link rel="icon" type="image/x-icon" href="public/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="public/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="public/favicon/site.webmanifest">
+
+    <!-- Satoshi font -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/work.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header>
+    <nav class="nav" id="nav">
+        <a href="/" class="nav__wordmark">Lateefat</a>
+
+        <!-- Desktop links -->
+        <ul class="nav__links">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact" class="nav__cta">Contact</a></li>
+        </ul>
+
+        <!-- Mobile hamburger -->
+        <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Mobile dropdown -->
+        <ul class="nav__mobile-menu">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero" aria-label="Product showcase">
+    <!-- Scene 1: Single landscape image -->
+    <div class="hero__scene is-active">
+        <img class="hero__image" src="public/hero/scene1.png" alt="SiteLog dashboard — construction project management interface">
+    </div>
+
+    <!-- Scene 2: Sliding phones -->
+    <div class="hero__scene">
+        <div class="hero__phones">
+            <img class="hero__phone" src="public/hero/phone1.png" alt="Mobile app — daily report view">
+            <img class="hero__phone" src="public/hero/phone2.png" alt="Mobile app — project dashboard">
+            <img class="hero__phone" src="public/hero/phone3.png" alt="Mobile app — payment checkout">
+            <img class="hero__phone" src="public/hero/phone4.png" alt="Mobile app — item list view">
+        </div>
+    </div>
+
+    <!-- Scene 3: Single landscape image -->
+    <div class="hero__scene">
+        <img class="hero__image" src="public/hero/scene3.png" alt="Paylio — payment link platform interface">
+    </div>
+
+    <!-- Scene 4: Single landscape image (laptop/desktop) -->
+    <div class="hero__scene">
+        <img class="hero__image" src="public/hero/scene2.png" alt="MailMint — AI email sequence platform on laptop">
+    </div>
+</section>
+
+<!-- ===== TAGLINE ===== -->
+<section class="section" aria-label="Tagline">
+    <div class="container">
+        <p class="tagline reveal">You bring the idea<br><span class="tagline-line2">I build the <span class="accent">product.</span></span></p>
+    </div>
+</section>
+
+<!-- ===== WORK ===== -->
+<section class="section" id="work" aria-label="Selected work">
+    <div class="container">
+
+        <div class="work__layout">
+            <!-- LEFT: Sticky Timeline -->
+            <div class="work__timeline">
+                <div class="work__timeline-track">
+                    <div class="work__timeline-line"></div>
+                    <div class="work__timeline-fill"></div>
+                    <div class="work__timeline-dot is-active" data-project="0">
+                        <span class="work__timeline-marker"></span>
+                        <div class="work__timeline-text">
+                            <span class="work__timeline-name">SiteLog</span>
+                            <span class="work__timeline-sub">B2B site reporting for construction teams</span>
+                        </div>
+                    </div>
+                    <div class="work__timeline-dot" data-project="1">
+                        <span class="work__timeline-marker"></span>
+                        <div class="work__timeline-text">
+                            <span class="work__timeline-name">Paylio</span>
+                            <span class="work__timeline-sub">Link-based payments for social sellers</span>
+                        </div>
+                    </div>
+                    <div class="work__timeline-dot" data-project="2">
+                        <span class="work__timeline-marker"></span>
+                        <div class="work__timeline-text">
+                            <span class="work__timeline-name">MailMint</span>
+                            <span class="work__timeline-sub">AI-powered email sequence platform</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Scrollable Cards -->
+            <div class="work__cards">
+                <a href="work/sitelog.html" class="work__card" data-project="0">
+                    <div class="work__card-heading">
+                        <span class="work__card-heading-name">SiteLog</span>
+                        <span class="work__card-heading-desc">B2B site reporting for construction teams</span>
+                    </div>
+                    <div class="work__card-img">
+                        <img src="public/work/sitelog/cover.png" alt="SiteLog product — dashboard and mobile views">
+                    </div>
+                    <div class="work__card-overlay">
+                        <span class="work__card-top">View Project ↗</span>
+                        <span class="work__card-title">SiteLog</span>
+                    </div>
+                </a>
+                <a href="work/paylio.html" class="work__card" data-project="1">
+                    <div class="work__card-heading">
+                        <span class="work__card-heading-name">Paylio</span>
+                        <span class="work__card-heading-desc">Link-based payments for social sellers</span>
+                    </div>
+                    <div class="work__card-img">
+                        <img src="public/work/paylio/cover.png" alt="Paylio product — payment link platform">
+                    </div>
+                    <div class="work__card-overlay">
+                        <span class="work__card-top">View Project ↗</span>
+                        <span class="work__card-title">Paylio</span>
+                    </div>
+                </a>
+                <a href="work/mailmint.html" class="work__card" data-project="2">
+                    <div class="work__card-heading">
+                        <span class="work__card-heading-name">MailMint</span>
+                        <span class="work__card-heading-desc">AI-powered email sequence platform</span>
+                    </div>
+                    <div class="work__card-img">
+                        <img src="public/work/mailmint/cover.png" alt="MailMint product — AI email sequence platform">
+                    </div>
+                    <div class="work__card-overlay">
+                        <span class="work__card-top">View Project ↗</span>
+                        <span class="work__card-title">MailMint</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about" aria-label="About">
+    <div class="container">
+        <div class="about reveal">
+            <!-- Left: headshot -->
+            <div class="about__image-wrap">
+                <img class="about__image" src="public/about/headshot.png" alt="Portrait of Lateefat B. Yusuf">
+            </div>
+
+            <!-- Right: text -->
+            <div class="about__content">
+                <h2 class="t-h2 about__name">I turn ideas into <span class="accent" style="font-style:italic">products</span> that solve real <span class="accent" style="font-style:italic">problems</span></h2>
+
+                <div class="about__bio t-body">
+                    <p>I partner with startups, founders, and businesses to design, build, and launch intuitive digital products that are ready for real users.</p>
+                    <p>Using product strategy, UX/UI design, and full-stack development, I turn ideas into production-ready products that drive business growth.</p>
+                </div>
+
+                <div style="text-align:right;">
+                    <a href="#contact" class="about__cta">
+                        Let's Talk <span class="about__cta-arrow">→</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact" aria-label="Contact">
+    <div class="container">
+        <div class="contact__inner reveal">
+
+            <!-- Chat-style block -->
+            <div class="contact__chat">
+                <div class="contact__chat-header">
+                    <div class="contact__avatar">
+                        <img src="public/about/headshot.png" alt="Teepha">
+                    </div>
+                    <p class="contact__prompt">Hey! What can I help you with?</p>
+                </div>
+
+                <form class="contact__form" id="contact-form">
+                    <input type="text" class="contact__input" placeholder="Type your message…" aria-label="Your message" required>
+                    <button type="submit" class="contact__send" aria-label="Send message">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </form>
+
+                <div class="contact__email">
+                    <a href="https://www.linkedin.com/in/yusufbimbolateefat/" target="_blank" rel="noopener noreferrer" class="contact__social" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://x.com/lateefat_bimbo" target="_blank" rel="noopener noreferrer" class="contact__social" aria-label="X">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <span class="contact__email-addr" id="contact-email">bimbolateeefat@gmail.com</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container footer__inner">
+        <a href="/" class="footer__wordmark">Lateefat<span class="accent">.</span></a>
+
+        <div class="footer__copy">
+            <span>© Copyright 2026</span>
+        </div>
+
+        <div class="footer__right">
+            <ul class="footer__socials">
+                <li><a href="https://www.linkedin.com/in/yusufbimbolateefat/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+                <li><a href="https://x.com/lateefat_bimbo" target="_blank" rel="noopener noreferrer" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/nav.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/scroll-reveal.js"></script>
+<script src="js/work.js"></script>
+<script src="js/contact.js"></script>
+
+</body>
+</      

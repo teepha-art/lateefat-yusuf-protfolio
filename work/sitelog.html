@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteLog — Case Study | Teepha</title>
+    <meta name="description" content="SiteLog case study — a B2B site-reporting app for small construction firms. Designed and built full-stack, solo.">
+    <link rel="icon" type="image/x-icon" href="../public/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="../public/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../public/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../public/favicon/site.webmanifest">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../tokens.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/case-study.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+    <nav class="nav">
+        <a href="../index.html" class="nav__wordmark">Lateefat</a>
+        <ul class="nav__links">
+            <li><a href="../index.html#work">Work</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#contact" class="nav__cta">Contact</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__mobile-menu">
+            <li><a href="../index.html#work">Work</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="section">
+    <div class="container">
+
+        <!-- Back link -->
+        <a href="../index.html#work" class="cs-back">← Back to work</a>
+
+        <!-- Header -->
+        <div class="cs-header reveal">
+            <p class="t-label cs-header__eyebrow">SiteLog</p>
+            <h2 class="t-h2 cs-header__title">A B2B site-reporting app that gives small construction firms one place to track daily reports, issues, and material requests.</h2>
+            <div class="cs-header__meta">
+                <span class="cs-header__meta-item">2026</span>
+                <span class="cs-header__meta-sep">·</span>
+                <span class="cs-header__meta-item">Product Design + Full-stack build</span>
+                <span class="cs-header__meta-sep">·</span>
+                <span class="cs-header__meta-item">Mobile + Desktop</span>
+                <span class="cs-header__meta-sep">·</span>
+                <a href="https://sitelog-sage.vercel.app" target="_blank" rel="noopener noreferrer" class="cs-header__visit">Visit SiteLog ↗</a>
+            </div>
+        </div>
+
+        <!-- Hero image -->
+        <div class="cs-hero reveal">
+            <img src="../public/work/sitelog/cover.png" alt="SiteLog product — dashboard and mobile interface">
+        </div>
+
+        <!-- Problem -->
+        <div class="cs-section reveal">
+            <h3 class="cs-section__heading">The problem</h3>
+            <p>Small construction firms can't afford or justify enterprise project tools, so they run their sites on phone calls, WhatsApp, and paper. The result: issues surface too late, material requests get lost, and when something goes wrong there's no reliable record of what happened on site — or who's accountable.</p>
+        </div>
+
+        <!-- My role -->
+        <div class="cs-section reveal">
+            <h3 class="cs-section__heading">My role</h3>
+            <p>Designed the UX/UI and built the entire app full-stack, solo, and deployed it to production. I owned the whole product — concept, product decisions, design, development, and launch.</p>
+        </div>
+
+        <!-- Key decision (centerpiece) -->
+        <div class="cs-key-decision reveal">
+            <h3 class="cs-section__heading">The key decision</h3>
+            <p>Mid-build, I realized the app had no concept of separate organizations — every Project Manager could see every supervisor in the system, including people from other companies. I spotted this multi-tenancy gap and designed an invite-code system: each PM gets a unique code, supervisors join a specific PM's team using that code, and each company's data stays isolated. This turned a single-org demo into a genuine multi-company B2B product.</p>
+        </div>
+
+        <!-- What I built -->
+        <div class="cs-section reveal">
+            <h3 class="cs-section__heading">What I built</h3>
+            <ul class="cs-features">
+                <li>Role-based dual experience — a mobile-first field interface for Site Supervisors and a desktop oversight dashboard for Project Managers</li>
+                <li>Invite-code multi-tenancy — PMs invite and manage their own team, with per-company data isolation, plus remove and re-join flows with access control</li>
+                <li>Core site workflows — daily reports, issue tracking, and material requests, with image uploads</li>
+                <li>Secure authentication — hashed passwords, sessions, and email-based password reset</li>
+            </ul>
+        </div>
+
+        <!-- Stack -->
+        <div class="cs-section reveal">
+            <h3 class="cs-section__heading">Stack</h3>
+            <p class="cs-stack">Next.js, TypeScript, Prisma, PostgreSQL, deployed on Vercel + Neon, with a custom CSS-Modules design system.</p>
+        </div>
+
+        <!-- Outcome -->
+        <div class="cs-section reveal">
+            <h3 class="cs-section__heading">Outcome</h3>
+            <p>Live at <a href="https://sitelog-sage.vercel.app" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;text-underline-offset:3px;">sitelog-sage.vercel.app</a>. Currently shared with construction professionals for real-world feedback.</p>
+        </div>
+
+        <!-- Next project -->
+        <div class="cs-next reveal">
+            <a href="paylio.html" class="cs-next__link">Next: Paylio →</a>
+        </div>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer__inner">
+        <a href="../index.html" class="footer__wordmark">Teepha<span class="accent">.</span></a>
+        <div class="footer__email"><a href="mailto:bimbolateeefat@gmail.com">bimbolateeefat@gmail.com</a></div>
+        <div class="footer__right">
+            <ul class="footer__socials">
+                <li><a href="https://www.linkedin.com/in/yusufbimbolateefat/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://x.com" target="_blank" rel="noopener noreferrer">X</a></li>
+            </ul>
+            <span class="footer__copy">© 2026</span>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/nav.js"></script>
+<script src="../js/scroll-reveal.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+.work__layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+    min-height: 200vh;
+}
+
+/* --- Left sticky timeline --- */
+.work__timeline {
+    position: sticky;
+    top: 32px;
+    width: 30%;
+    height: fit-content;
+    align-self: flex-start;
+    padding-left: 28px;
+}
+
+.work__timeline-track {
+    position: relative;
+}
+
+.work__timeline-line {
+    position: absolute;
+    left: 6px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: var(--line);
+}
+
+.work__timeline-dot {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.work__timeline-dot:last-child {
+    margin-bottom: 0;
+}
+
+.work__timeline-marker {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    background: #9A9A9A;
+    border: 2px solid var(--bg);
+    flex-shrink: 0;
+    z-index: 1;
+    margin-top: 5px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work__timeline-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.work__timeline-name {
+    font-weight: 700;
+    font-size: 22px;
+    color: #121212;
+    transition: color 0.3s ease;
+}
+
+.work__timeline-sub {
+    font-size: 15px;
+    font-weight: 400;
+    color: #6B6B6B;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.work__timeline-dot.is-active .work__timeline-marker {
+    background: var(--accent);
+    animation: pulse 1s infinite;
+}
+
+.work__timeline-dot.is-active .work__timeline-name {
+    color: var(--accent);
+}
+
+.work__timeline-dot.is-past .work__timeline-marker {
+    background: #9A9A9A;
+}
+
+.work__timeline-fill {
+    position: absolute;
+    left: 6px;
+    top: 5px;
+    width: 2px;
+    height: 0%;
+    background: var(--accent);
+    z-index: 1;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(212, 98, 42, 0.6); }
+    70% { box-shadow: 0 0 0 12px rgba(212, 98, 42, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 98, 42, 0); }
+}
+
+/* --- Right scrollable cards --- */
+.work__cards {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.work__card {
+    position: relative;
+    display: block;
+    max-width: 640px;
+    border-radius: var(--r-img);
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.work__card:hover {
+    transform: scale(1.03);
+}
+
+.work__card-img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.work__card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* --- Card heading (mobile only) --- */
+.work__card-heading {
+    display: none;
+}
+
+/* --- Card overlay --- */
+.work__card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.work__card:hover .work__card-overlay {
+    opacity: 1;
+}
+
+.work__card-top {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.work__card-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
+
+/* --- Tablet --- */
+@media (max-width: 900px) and (min-width: 681px) {
+    .work__layout {
+        flex-direction: column;
+        gap: 32px;
+        min-height: auto;
+    }
+
+    .work__timeline {
+        position: static;
+        width: 100%;
+        padding-left: 0;
+        top: auto;
+    }
+
+    .work__timeline-track {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .work__timeline-line {
+        display: none;
+    }
+
+    .work__timeline-dot {
+        margin-bottom: 0;
+    }
+
+    .work__cards {
+        width: 100%;
+    }
+}
+
+/* --- Mobile (≤680px) --- */
+@media (max-width: 680px) {
+    .work__layout {
+        flex-direction: column;
+        gap: 32px;
+        min-height: auto;
+    }
+
+    .work__timeline {
+        display: none;
+    }
+
+    .work__cards {
+        width: 100%;
+        gap: 40px;
+    }
+
+    .work__card-heading {
+        display: block;
+        margin-bottom: var(--s-3);
+    }
+
+    .work__card-heading-name {
+        display: block;
+        font-weight: 700;
+        font-size: 22px;
+        color: #121212;
+        margin-bottom: 2px;
+    }
+
+    .work__card-heading-desc {
+        font-size: 14px;
+        font-weight: 400;
+        color: #6B6B6B;
+    }
+
+    .work__card {
+        max-width: none;
+    }
+
+    .work__card-img {
+        border-radius: var(--r-img);
+    }
+}

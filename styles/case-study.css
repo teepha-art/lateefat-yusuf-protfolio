@@ -1,0 +1,200 @@
+/* ============================================================
+   CASE STUDY — shared template for all 3 project pages
+   ============================================================ */
+
+/* --- Back link --- */
+.cs-back {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-bottom: var(--s-7);
+    transition: color 0.2s ease;
+}
+
+.cs-back:hover {
+    color: var(--ink);
+}
+
+/* --- Header block --- */
+.cs-header {
+    margin-bottom: var(--s-8);
+}
+
+.cs-header__eyebrow {
+    margin-bottom: var(--s-3);
+}
+
+.cs-header__title {
+    margin-bottom: var(--s-5);
+    max-width: 720px;
+}
+
+.cs-header__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-4);
+}
+
+.cs-header__meta-item {
+    font-size: 14px;
+    color: var(--ink-soft);
+}
+
+.cs-header__meta-sep {
+    color: var(--line);
+    font-size: 14px;
+}
+
+.cs-header__visit {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-1);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--bg);
+    background: var(--ink);
+    padding: 10px 20px;
+    border-radius: var(--r-pill);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.cs-header__visit:hover {
+    transform: translateY(-2px);
+    opacity: 0.88;
+    color: var(--bg);
+}
+
+/* --- Hero image --- */
+.cs-hero {
+    width: 100%;
+    margin-bottom: var(--s-9);
+    border-radius: var(--r-img);
+    overflow: hidden;
+    background: var(--bg-subtle);
+}
+
+.cs-hero img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+/* --- Content sections --- */
+.cs-section {
+    margin-bottom: var(--s-8);
+    max-width: 720px;
+}
+
+.cs-section__heading {
+    font-weight: 700;
+    font-size: clamp(20px, 2vw, 26px);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: var(--s-4);
+}
+
+.cs-section p {
+    font-size: clamp(16px, 1.2vw, 18px);
+    color: var(--ink-soft);
+    line-height: 1.62;
+    margin-bottom: var(--s-4);
+}
+
+.cs-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Key decision: centerpiece emphasis --- */
+.cs-key-decision {
+    margin-bottom: var(--s-9);
+    max-width: 720px;
+    padding-left: var(--s-5);
+    border-left: 3px solid var(--ink);
+}
+
+.cs-key-decision .cs-section__heading {
+    font-size: clamp(22px, 2.4vw, 30px);
+}
+
+.cs-key-decision p {
+    font-size: clamp(17px, 1.3vw, 20px);
+    color: var(--ink);
+    line-height: 1.55;
+}
+
+/* --- What I built: feature list --- */
+.cs-features {
+    list-style: none;
+    padding: 0;
+}
+
+.cs-features li {
+    position: relative;
+    padding-left: var(--s-5);
+    font-size: clamp(16px, 1.2vw, 18px);
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-bottom: var(--s-3);
+}
+
+.cs-features li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* --- Stack line --- */
+.cs-stack {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+}
+
+/* --- Next project link --- */
+.cs-next {
+    margin-top: var(--s-9);
+    padding-top: var(--s-7);
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cs-next__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.cs-next__link:hover {
+    color: var(--accent);
+    transform: translateX(4px);
+}
+
+/* --- Responsive --- */
+@media (max-width: 680px) {
+    .cs-header__meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--s-2);
+    }
+
+    .cs-header__meta-sep {
+        display: none;
+    }
+
+    .cs-key-decision {
+        padding-left: var(--s-4);
+    }
+}

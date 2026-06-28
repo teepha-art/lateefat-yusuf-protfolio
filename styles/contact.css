@@ -1,0 +1,152 @@
+/* ============================================================
+   CONTACT — chat-style block (Valdivia-inspired)
+   ============================================================ */
+
+.contact__inner {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* --- Chat bubble area --- */
+.contact__chat {
+    background: #F0F0F0;
+    border-radius: var(--r-img);
+    padding: var(--s-6);
+    margin-bottom: var(--s-6);
+    max-width: 640px;
+    width: 100%;
+}
+
+.contact__chat-header {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    margin-bottom: var(--s-5);
+}
+
+.contact__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--line);
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.contact__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact__prompt {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--ink);
+    line-height: 1.4;
+}
+
+/* --- Form --- */
+.contact__form {
+    display: flex;
+    gap: var(--s-3);
+}
+
+.contact__input {
+    flex: 1;
+    font-family: 'Satoshi', system-ui, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--r-pill);
+    padding: 14px 20px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.contact__input::placeholder {
+    color: var(--accent);
+}
+
+.contact__input:focus {
+    border-color: var(--ink);
+}
+
+.contact__send {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    font-size: 18px;
+}
+
+.contact__send:hover {
+    transform: translateY(-2px);
+    opacity: 0.88;
+}
+
+/* --- Email inside chat card --- */
+.contact__email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--s-4);
+    margin-top: var(--s-5);
+    padding-top: var(--s-5);
+    border-top: 1px solid var(--line);
+}
+
+.contact__social {
+    display: flex;
+    align-items: center;
+    color: var(--ink-soft);
+    transition: color 0.2s ease;
+}
+
+.contact__social:hover {
+    color: var(--accent);
+}
+
+.contact__email-addr {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink);
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.contact__email-addr:hover {
+    color: var(--accent);
+}
+
+.contact__email-addr .contact__email-tooltip {
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--ink);
+    color: var(--bg);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.contact__email-addr:hover .contact__email-tooltip {
+    opacity: 1;
+}
