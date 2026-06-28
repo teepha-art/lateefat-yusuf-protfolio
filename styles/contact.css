@@ -41,9 +41,10 @@
 
 .contact__prompt {
     font-weight: 600;
-    font-size: 16px;
+    font-size: clamp(14px, 3.5vw, 16px);
     color: var(--ink);
     line-height: 1.4;
+    white-space: nowrap;
 }
 
 /* --- Form --- */

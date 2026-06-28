@@ -108,36 +108,58 @@
     color: #FFFFFF !important;
 }
 
-/* --- Mobile dropdown --- */
+/* --- Mobile dropdown (full-width, drops below nav) --- */
 .nav__mobile-menu {
     display: none;
     position: absolute;
-    top: calc(100% + 4px);
-    right: var(--pad-x);
+    top: 100%;
+    left: 0;
+    right: 0;
     background: var(--bg);
-    border: 1px solid var(--line);
-    border-radius: var(--r-img);
-    padding: var(--s-4) 0;
-    min-width: 180px;
+    border-bottom: 1px solid var(--line);
+    padding: var(--s-2) 0;
     box-shadow: var(--shadow-soft);
     z-index: 105;
     list-style: none;
+    text-align: center;
 }
 
 .nav__mobile-menu.is-open {
     display: block;
 }
 
-.nav__mobile-menu a {
-    display: block;
-    padding: var(--s-3) var(--s-5);
-    font-weight: 600;
-    font-size: 15px;
-    color: var(--ink);
+.nav__mobile-menu li {
+    margin: 0;
 }
 
-.nav__mobile-menu a:hover {
+.nav__mobile-menu a {
+    display: block;
+    padding: 16px var(--pad-x);
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--ink);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav__mobile-menu a:hover,
+.nav__mobile-menu a:active {
     background: var(--bg-subtle);
+}
+
+/* Contact link in mobile menu styled as a button */
+.nav__mobile-menu .nav__mobile-cta {
+    color: #FFFFFF !important;
+    background: var(--accent);
+    padding: 16px var(--pad-x);
+    border-radius: 100px;
+    margin: 4px 24px;
+    width: auto;
+}
+
+.nav__mobile-menu .nav__mobile-cta:hover,
+.nav__mobile-menu .nav__mobile-cta:active {
+    background: #121212;
 }
 
 /* --- Responsive --- */
