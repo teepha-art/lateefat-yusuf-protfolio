@@ -170,6 +170,28 @@
     font-weight: 700;
 }
 
+/* --- In-content image (placed between text sections) --- */
+.cs-image {
+    width: 100%;
+    display: block;
+}
+
+.cs-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+}
+
+.cs-caption {
+    font-size: 15px;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-top: 14px;
+    margin-bottom: var(--s-9);
+    text-align: left;
+}
+
 /* --- Stack line --- */
 .cs-stack {
     font-size: 15px;
