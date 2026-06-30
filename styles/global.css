@@ -172,6 +172,39 @@ img {
     }
 }
 
+/* ---------- Scroll to top ---------- */
+#scroll-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background 0.2s ease;
+    z-index: 1000;
+}
+
+#scroll-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#scroll-top:hover {
+    background: #B8501F;
+}
+
+#scroll-top svg {
+    display: block;
+}
+
 /* ---------- Custom cursor ---------- */
 * {
   cursor: url('../public/cursors/arrow.png') 4 4, auto;
