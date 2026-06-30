@@ -33,12 +33,15 @@
 
 /* --- Single image scenes (1, 3, 4) --- */
 .hero__image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     display: block;
-    /* NO border-radius, NO shadow, NO inset — the image IS the hero */
+    max-width: none;
 }
 
 /* --- Scene 1: shift position so nothing is cut off --- */
