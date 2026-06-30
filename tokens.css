@@ -152,6 +152,25 @@ body {
     border-radius: var(--r-pill);
 }
 
+/* --- Large screens: 1600px+ --- */
+@media (min-width: 1600px) {
+    :root {
+        --maxw: 1440px;
+    }
+}
+
+/* --- Very large screens: 1920px+ --- */
+@media (min-width: 1920px) {
+    :root {
+        --maxw: 1650px;
+        --pad-x: 56px;
+        --s-7: 56px;
+        --s-8: 80px;
+        --s-9: 120px;
+        --s-10: 160px;
+    }
+}
+
 /* ---------- Quality floor ---------- */
 :focus-visible {
     outline: 2px solid var(--ink);

@@ -37,13 +37,13 @@
 .nav__links a {
     font-weight: 600;
     font-size: 15px;
-    color: #9A9A9A;
+    color: var(--accent);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .nav__links a.nav__link--active {
-    color: #121212;
+    color: var(--accent);
 }
 
 .nav__links a:hover {
@@ -151,7 +151,7 @@
 }
 
 .nav__mobile-menu a.nav__link--active {
-    color: #121212;
+    color: var(--accent);
 }
 
 .nav__mobile-menu a:hover {
@@ -165,8 +165,10 @@
     padding: 14px 24px;
     border-radius: 100px;
     margin: 24px 0 48px;
-    width: auto;
-    display: inline-block;
+    width: 100%;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .nav__mobile-menu .nav__mobile-cta:hover,
@@ -223,5 +225,24 @@
 
     .nav__hamburger {
         display: block;
+    }
+}
+
+/* 1920px+ — larger nav */
+@media (min-width: 1920px) {
+    .nav__wordmark {
+        font-size: 32px;
+    }
+
+    .nav__links {
+        gap: var(--s-7);
+    }
+
+    .nav__links a {
+        font-size: 17px;
+    }
+
+    .nav__cta {
+        padding: 12px 26px;
     }
 }

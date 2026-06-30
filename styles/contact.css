@@ -151,3 +151,20 @@
 .contact__email-addr:hover .contact__email-tooltip {
     opacity: 1;
 }
+
+/* 1920px+ — larger contact section */
+@media (min-width: 1920px) {
+    .contact__chat {
+        max-width: 720px;
+        padding: var(--s-7);
+    }
+
+    .contact__avatar {
+        width: 52px;
+        height: 52px;
+    }
+
+    .contact__prompt {
+        font-size: 18px;
+    }
+}

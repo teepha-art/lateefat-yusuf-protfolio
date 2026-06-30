@@ -134,3 +134,27 @@
         max-width: 390px;
     }
 }
+
+/* 1920px+ — larger about */
+@media (min-width: 1920px) {
+    .about {
+        gap: var(--s-9);
+    }
+
+    .about__image-wrap {
+        width: 460px;
+    }
+
+    .about__name {
+        margin-bottom: var(--s-8);
+    }
+
+    .about__bio {
+        font-size: clamp(17px, 1.5vw, 24px);
+    }
+
+    .about__cta {
+        padding: 14px 32px;
+        font-size: 16px;
+    }
+}

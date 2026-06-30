@@ -181,6 +181,13 @@
 }
 
 /* --- Reduced motion: no auto-cycle, show static --- */
+/* 1920px+ — larger phone mockups */
+@media (min-width: 1920px) {
+    .hero__phone {
+        height: 64vh;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .hero__scene {
         transition: none;

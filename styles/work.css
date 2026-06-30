@@ -212,6 +212,25 @@
 }
 
 /* --- Mobile (≤680px) --- */
+/* 1920px+ — larger work section */
+@media (min-width: 1920px) {
+    .work__layout {
+        gap: 140px;
+    }
+
+    .work__card {
+        max-width: 760px;
+    }
+
+    .work__timeline-name {
+        font-size: 26px;
+    }
+
+    .work__timeline-sub {
+        font-size: 17px;
+    }
+}
+
 @media (max-width: 680px) {
     .work__layout {
         flex-direction: column;
